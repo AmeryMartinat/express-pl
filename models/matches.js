@@ -9,9 +9,9 @@ module.exports = (sequelize, DataTypes) => {
       timeout: {
           type: 'TIMESTAMP'
       },
-      fee_amount: DataTypes.DECIMAL(2,8),
+      fee_amount: DataTypes.DECIMAL(8,2),
       fee_currency_code: DataTypes.STRING,
-      price_amount: DataTypes.DECIMAL(2,8),
+      price_amount: DataTypes.DECIMAL(8,2),
       price_currency_code: DataTypes.STRING,
       play_two_for_region: DataTypes.BOOLEAN
     });
