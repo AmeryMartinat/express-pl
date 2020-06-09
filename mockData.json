@@ -1,0 +1,100 @@
+{
+	"_id": 290212453473860,
+	"crtTs": 1583493124,
+	"creator": 5576547526062661,
+	"name": "Matchmaking Match",
+	"type": "H",
+	"rules": {
+		"fn_game_type": "box_fight",
+		"match_length": "one",
+		"wager_type": "money",
+		"entry_fee": 1
+	},
+	"matchType": "matchmaking",
+	"description": "",
+	"timeType": "now",
+	"status": "completed",
+	"matchedReadyTs": 1583493424,
+	"startTs": 1583493124,
+	"opponent": 1606057576026298,
+	"players": [5576547526062661, 1606057576026298],
+	"console": "controller",
+	"game": "fn",
+	"console_game": "controller-fn",
+	"game_type": "fn",
+	"timeoutTs": 1583495824,
+	"settings": {
+		"console": "controller",
+		"game": "fn",
+		"amount": 1,
+		"type": "box_fight"
+	},
+	"home_team": "creator",
+	"creatorMatchmakingId": 6854035475890569,
+	"opponentMatchmakingId": "0",
+	"same_region": true,
+	"instant_match": true,
+	"instant_match_type": "instant",
+	"instant_match_originator": 5576547526062661,
+	"instant_match_joiner": 1606057576026298,
+	"plrsBefore": [{
+			"userId": 1606057576026298,
+			"plr": 75
+		},
+		{
+			"userId": 5576547526062661,
+			"plr": 57
+		}
+	],
+	"mp": false,
+	"mt": false,
+	"create_source": "blind_matchmaking",
+	"uTs": 1583499550,
+	"ready": {
+		"5576547526062661": {
+			"all": [
+				1583493127
+			],
+			"status": 1583493127
+		},
+		"bgReadyExpire": 1583494927,
+		"1606057576026298": {
+			"all": [
+				1583493130
+			],
+			"status": 1583493130
+		}
+	},
+	"here": {
+		"1606057576026298": 1583494523
+	},
+	"disputeTs": 1583493413,
+	"dispute_reason_info": {
+		"reason": "",
+		"starter": 1606057576026298,
+		"scores": {
+			"creator": false,
+			"opponent": false
+		}
+	},
+	"disputed": true,
+	"complete_source": "concede",
+	"completedTs": 1583499550,
+	"concede": true,
+	"loser": 5576547526062661,
+	"losers": [5576547526062661],
+	"winner": 1606057576026298,
+	"winners": [
+		1606057576026298
+	],
+	"plr": true,
+	"plrsAfter": [{
+			"userId": 1606057576026298,
+			"plr": 76
+		},
+		{
+			"userId": 5576547526062661,
+			"plr": 57
+		}
+	]
+}
