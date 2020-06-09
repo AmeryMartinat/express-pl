@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
       description: DataTypes.STRING
     });
     Consoles.associate = function(models) {
-      models.Consoles.hasOne(models.Matches)
+      models.Consoles.belongsTo(models.Matches)
     };
   
     return Consoles;

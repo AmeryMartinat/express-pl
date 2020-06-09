@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
     });
   
     Ratings.associate = function(models) {
-      models.Ratings.hasMany(models.Users)
+      // models.Ratings.belongsToMany(models.Users)
     };
   
     return Ratings;

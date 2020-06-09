@@ -16,8 +16,8 @@ module.exports = (sequelize, DataTypes) => {
       }
     });
     Players.associate = function(models) {
-      models.Players.hasOne(models.Users);
-      models.Players.hasOne(models.Matches)
+      models.Players.belongsTo(models.Users);
+      models.Players.belongsTo(models.Matches)
     };
   
     return Players;

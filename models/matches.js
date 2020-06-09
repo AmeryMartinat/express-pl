@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
     Matches.associate = function(models) {
       models.Matches.hasOne(models.Consoles)
       models.Matches.hasOne(models.Formats)
-      models.Matches.hasMany(models.Rules)
+      models.Matches.belongsToMany(models.Rules, {through: 'match_rules'})
       models.Matches.belongsToMany(models.Users, {through: models.Players})
     };
   

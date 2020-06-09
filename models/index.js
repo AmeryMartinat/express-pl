@@ -11,9 +11,19 @@ const db = {};
 let sequelize;
 if (config.use_env_variable) {
   sequelize = new Sequelize(process.env[config.use_env_variable], config);
+  sequelize.sync({ force: true })
+  .then(() => {
+    console.log(`Database & tables created!`)
+  })
 } else {
   sequelize = new Sequelize(config.database, config.username, config.password, config);
+  sequelize.sync({ force: true })
+  .then(() => {
+    console.log(`Database & tables created!`)
+  })
 }
+
+
 
 fs
   .readdirSync(__dirname)

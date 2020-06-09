@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
     });
   
     Platforms.associate = function(models) {
-      models.Platforms.hasMany(models.Gamertags)
+      // models.Platforms.belongsToMany(models.Gamertags)
     };
   
     return Platforms;

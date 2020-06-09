@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    var Dispute_Scores = sequelize.define('Dispute_Scores', {
+    var DisputeScores = sequelize.define('DisputeScores', {
       pkey: {
           type: DataTypes.INTEGER,
           autoIncrement:true,
@@ -7,10 +7,10 @@ module.exports = (sequelize, DataTypes) => {
       },
       score: DataTypes.BOOLEAN
     });
-    Dispute_Scores.associate = function(models) {
-      models.Dispute_Scores.hasOne(models.Disputes)
-      models.Dispute_Scores.hasOne(models.Users)
+    DisputeScores.associate = function(models) {
+      models.DisputeScores.belongsTo(models.Disputes)
+      models.DisputeScores.belongsTo(models.Users)
     };
   
-    return Dispute_Scores;
+    return DisputeScores;
   };

@@ -12,8 +12,8 @@ module.exports = (sequelize, DataTypes) => {
     });
   
     Games.associate = function(models) {
-      models.Games.hasMany(models.Formats);
-      models.Games.hasMany(models.Rules);
+      models.Games.belongsToMany(models.Formats, {through: 'game_formats'});
+      models.Games.belongsToMany(models.Rules, {through: 'game_rules'});
     };
   
     return Games;
