@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
   
     Formats.associate = function(models) {
       models.Formats.belongsToMany(models.Games, {through: 'game_formats'});
-      models.Formats.belongsTo(models.Matches);
+      models.Formats.hasMany(models.Matches);
     };
   
     return Formats;

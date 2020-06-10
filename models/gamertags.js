@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
     });
   
     Gamertags.associate = function(models) {
-      models.Gamertags.hasOne(models.Platforms)
+      models.Gamertags.belongsTo(models.Platforms)
       models.Gamertags.belongsTo(models.Users)
     };
   

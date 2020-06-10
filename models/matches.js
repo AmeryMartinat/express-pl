@@ -16,8 +16,8 @@ module.exports = (sequelize, DataTypes) => {
       play_two_for_region: DataTypes.BOOLEAN
     });
     Matches.associate = function(models) {
-      models.Matches.hasOne(models.Consoles)
-      models.Matches.hasOne(models.Formats)
+      models.Matches.belongsTo(models.Consoles)
+      models.Matches.belongsTo(models.Formats)
       models.Matches.belongsToMany(models.Rules, {through: 'match_rules'})
       models.Matches.belongsToMany(models.Users, {through: models.Players})
     };

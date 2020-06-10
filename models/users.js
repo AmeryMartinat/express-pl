@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
   
     Users.associate = function(models) {
       models.Users.hasMany(models.Gamertags);
-      models.Users.hasOne(models.Ratings)
+      models.Users.belongsTo(models.Ratings)
       models.Users.belongsToMany(models.Matches, {through: models.Players})
       models.Users.belongsToMany(models.Disputes, {through: models.DisputeScores})
     };

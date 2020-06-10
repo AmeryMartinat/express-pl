@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
       id: DataTypes.STRING,
       name: DataTypes.STRING,
       background: DataTypes.STRING,
-
+      scoreLabel: DataTypes.STRING
     });
   
     Games.associate = function(models) {
