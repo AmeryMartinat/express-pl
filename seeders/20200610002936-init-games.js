@@ -10,7 +10,8 @@ module.exports = {
         background: 'http://images.playerslounge.co/img/match/fortnite.png',
         scoreLabel: 'Score',
         createdAt: '2020-06-09 19:42:40.557000 +00:00',
-        updatedAt: '2020-06-09 19:42:40.557000 +00:00'
+        updatedAt: '2020-06-09 19:42:40.557000 +00:00',
+        PlatformPkey: 1
       },
       {
         id: 'val',
@@ -18,7 +19,8 @@ module.exports = {
         scoreLabel: 'Score',
         background: 'http://images.playerslounge.co/img/match/valorant.png',
         createdAt: '2020-06-09 19:42:40.557000 +00:00',
-        updatedAt: '2020-06-09 19:42:40.557000 +00:00'
+        updatedAt: '2020-06-09 19:42:40.557000 +00:00',
+        PlatformPkey: 3
       }
     ]
   );

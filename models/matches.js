@@ -22,6 +22,7 @@ module.exports = (sequelize, DataTypes) => {
       models.Matches.belongsTo(models.GlobalStates)
       models.Matches.belongsToMany(models.Rules, {through: 'match_rules'})
       models.Matches.belongsToMany(models.Users, {through: models.Players})
+      models.Matches.hasOne(models.Disputes)
     };
   
     return Matches;
