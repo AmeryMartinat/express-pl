@@ -1,5 +1,14 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  if !is_response
+    h1 #{title}
+    p Please Paste mockData.json below
+
+    form(name="parse-data", method="post")
+      div.input
+          textarea(name="data", cols="100", rows="100")
+      div.actions
+          input(type="submit", value="Parse It!")
+  else
+    p #{title}
