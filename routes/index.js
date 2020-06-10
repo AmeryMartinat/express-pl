@@ -20,6 +20,7 @@ router.post('/', async function (req, res) {
       var game_state = game_state_list[0];
 
       var game_list = await models.Games.findAll({
+        include: [{model: models.Rules}],
         where: {
           id: ingested_data.settings.game
         }
@@ -89,6 +90,16 @@ router.post('/', async function (req, res) {
           FormatPkey: format.pkey,
           GamePkey: game.pkey,
           GlobalStatePkey: game_state.pkey
+      })
+      var rule_list = []
+      game.Rules.forEach(r => {
+        rule_list.push(
+          {
+            "title" : r.title,
+            "body" : r.body,
+            "icon" : r.icon
+          }
+        )
       })
 
       var creator_player = await models.Players.create({
@@ -190,18 +201,7 @@ router.post('/', async function (req, res) {
               },
               "background": game.background,
               "scoreLabel": game.score,
-              "rules": [
-                {
-                  "title": "No interference",
-                  "body": "You're not allowed to intentionally interfere with your opponent's attempts to move around the map or score kills. You can't build in front of them or break their structures, unless Sabotage is explicitly allowed. You can break your own structures.",
-                  "icon": "https://images.playerslounge.co/img/rules/restricted-icon.png"
-                },
-                {
-                  "title": "Kills while downed",
-                  "body": "Kills while downed count towards your final score. Kills after your death, however you get them, do not. Sorry, no trap kills from beyond the grave.",
-                  "icon": "https://images.playerslounge.co/img/rules/restricted-icon.png"
-                }
-              ],
+              "rules": rule_list,
               "format": {
                 "title": format.title,
                 "icon": format.icon
